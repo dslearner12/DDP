@@ -1,0 +1,28 @@
+---
+title: "DDPWk3"
+author: "DSLearner12"
+date: "March 9, 2019"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(plotly)
+
+```
+
+
+## Slide with R Output
+
+```{r cars, echo = FALSE,comment=""}
+head(mtcars)
+
+```
+
+## Slide with Plot
+
+```{r pressure, echo=FALSE ,message=FALSE}
+plot_ly(mtcars, x=~wt, y=~mpg, mode="markers", color=as.factor(mtcars$cyl))
+
+```
+
