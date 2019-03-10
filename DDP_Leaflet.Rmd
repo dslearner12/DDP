@@ -1,0 +1,18 @@
+---
+title: "DDP_Leaflet"
+author: "DSLearner12"
+date: "March 9, 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(leaflet)
+```
+
+```{r fig.cap="Favorite vacation spots!"}
+s<-c("<a href=''>Disneyland</a>","<a href=''>Walt Disney World</a>")
+df<-data.frame(lat=c(33.8121,28.385233),long=c(-117.91899,-81.56387))
+df %>% leaflet() %>% addTiles() %>% addMarkers(popup=s)
+
+```
